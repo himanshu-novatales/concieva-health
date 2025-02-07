@@ -17,22 +17,17 @@ const Navbar = () => {
       } else {
         document.body.style.overflow = "";
       }
-      // Cleanup on unmount
       return () => {
         document.body.style.overflow = "";
       };
-    }, [isOpen]);
-   
+    }, [isOpen]);   
     const navigate = useNavigate()
   return (
     <nav className="bg-[#EFF7F7] p-2  px-3 w-full z-20 lg:top-10   shadow-md">
       <div className="flex justify-between items-center max-w-screen-2xl mx-auto">
-        {/* Logo */}
         <div>
           <img className="w-36" onClick={() => navigate("/")} src={logo} alt="logo" />
         </div>
-
-        {/* Desktop Menu */}
         <div className="hidden lg:flex md:justify-between flex-row gap-4 xl:gap-6 font-medium text-md text-gray-700">
           <Link to="/" className="text-[#0065B3]  hover:text-[#FFA61A] transition-all hover:duration-200">
             Home
@@ -47,11 +42,9 @@ const Navbar = () => {
            About Us
           </Link>
           <Link to="#" className="text-[#0065B3]  hover:text-[#FFA61A] transition-all hover:duration-200">
-            Contacts <KeyboardArrowDownIcon />
+            Contact Us
           </Link>
         </div>
-
-        {/* Right Icons & Button */}
         <div className="hidden lg:flex justify-center items-center gap-3">
           <SearchIcon
             className="hidden lg:block"
@@ -61,8 +54,6 @@ const Navbar = () => {
             Book A Visit
           </button>
         </div>
-
-        {/* Mobile Menu Toggle */}
         <div className="flex flex-row lg:hidden">
           <button className="py-3 hidden md:block bg-[#0065B3] hover:bg-[#FFA61A] transition-all hover:duration-200 text-white  hover:text-[#0065B3] mr-10 px-6 lg:px-10 rounded-3xl">
             Book A Visit
@@ -109,10 +100,10 @@ const Navbar = () => {
           </li>
           <li className="border-b-2 border-gray-400 w-full" onClick={()=> setIsOpen(false)}>
             <Link to="#" className="block py-2 px-4 text-[#0065B3]  hover:text-[#FFA61A] transition-all hover:duration-200">
-              Contacts
+              Contact Us
             </Link>
           </li>
-          <li className="flex gap-3 justify-center items-center w-full" onClick={()=> setIsOpen(false)}>
+          <li className="flex gap-3 justify-center items-center w-full">
             <input
               className="bg-transparent py-3 px-5 rounded-3xl border-[1px] w-9/12"
               type="text"
