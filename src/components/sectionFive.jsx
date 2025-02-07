@@ -9,25 +9,10 @@ import ArrowForwardOutlinedIcon from "@mui/icons-material/ArrowForwardOutlined";
 import slider from "../assets/images/baby-care-1.jpg";
 import { motion, useScroll, useTransform } from "framer-motion";
 export default function SectionFive() {
-  const [isModalOpen, setIsModalOpen] = useState(false);
   const { scrollY } = useScroll();
   const y = useTransform(scrollY, [0, 800], [0, -500]);
-
-  // Restrict background scrolling when modal is open
-  useEffect(() => {
-    if (isModalOpen) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "";
-    }
-    // Cleanup on unmount
-    return () => {
-      document.body.style.overflow = "";
-    };
-  }, [isModalOpen]);
-
   return (
-    <div className="section-five-container relative  2xl:mb-60 xl:mb-20 p-5">
+    <div className="section-five-container relative mb-10 2xl:mb-30 xl:mb-20 p-5">
       <h1 className="text-6xl text-center font-custom mb-6 2xl:mt-24 mt-12">
         Meet Our Doctors
       </h1>
@@ -113,7 +98,8 @@ export default function SectionFive() {
           width="466"
           height="418"
           viewBox="0 0 466 418"
-          fill="none" color="#ddffff"
+          fill="none"
+          color="#ddffff"
         >
           <path
             d="M465.266 417.806C430.69 416.294 397.436 405.332 365.883 391.913C334.141 378.494 301.643 363.186 277.836 337.482C265.177 323.686 255.541 307.432 246.094 291.367C237.025 275.869 227.767 260.183 218.508 244.685C199.992 213.69 181.098 182.505 160.126 153.022C139.342 123.916 115.913 96.3229 88.8947 72.8873C85.4938 70.0524 82.2818 67.2175 78.8808 64.3825C78.1251 63.8155 79.0698 62.6815 79.6366 63.2485C107.222 85.1721 130.84 111.821 152.19 139.792C173.729 167.953 192.812 198.003 211.14 228.431C220.398 243.74 229.467 259.427 239.103 274.735C248.928 290.422 258.564 306.298 269.712 321.04C280.67 335.592 293.518 348.066 308.256 358.461C322.615 368.667 338.297 376.794 354.357 384.164C385.722 398.528 418.219 411.569 452.796 415.916C456.952 416.483 461.298 416.861 465.455 417.05C466.211 416.672 466.211 417.995 465.266 417.806Z"

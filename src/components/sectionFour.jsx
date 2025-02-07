@@ -1,6 +1,5 @@
 import React from "react";
 import LocalHospitalIcon from "@mui/icons-material/LocalHospital";
-import MedicalServicesIcon from "@mui/icons-material/MedicalServices";
 import service1 from "../assets/images/baby-care-2.jpg";
 import service2 from "../assets/images/baby-care-4.avif";
 import service3 from "../assets/images/baby-care-1.jpg";
@@ -9,8 +8,12 @@ import service5 from "../assets/images/baby-care-9.avif";
 import service6 from "../assets/images/baby-care-10.avif";
 import service7 from "../assets/images/baby-care-11.avif";
 import service8 from "../assets/images/baby-care-16.avif";
+import { useLocation } from "react-router-dom";
 import { motion, useScroll, useTransform } from "framer-motion";
 const SectionFour = () => {
+  const location = useLocation();
+  const isHomePage = location.pathname === "/";
+
   const { scrollY } = useScroll();
   const y = useTransform(scrollY, [0, 1000], [0, -500]);
   const services = [
@@ -70,6 +73,7 @@ const SectionFour = () => {
         "Complete diagnosis for males to detect fertility issues with proven tests and treatment options.",
     },
   ];
+  const displayedServices = isHomePage ? services : services.slice(0, 4);
   return (
     <div className="flex justify-center items-center relative lg:mt-20 md:mt-10 mt-10 mb-5 2xl:mb-20 ">
       <motion.div
@@ -138,8 +142,12 @@ const SectionFour = () => {
         <h1 className="text-5xl text-center font-medium font-custom">
           Our service
         </h1>
-        <div className="flex flex-row flex-wrap w-full 2xl:w-[80%] items-center text-left justify-center gap-5 mt-20 sm:p-0 p-3">
-          {services.map((service, index) => (
+        <div
+          className={`flex flex-row flex-wrap w-full ${
+            isHomePage ? "2xl:w-[80%]" : ""
+          }  items-center text-left justify-center gap-5 mt-20 sm:p-0 p-3`}
+        >
+          {displayedServices.map((service, index) => (
             <div className=" md:h-[19rem] h-[18rem] w-full md:w-[19rem] rounded-xl relative">
               <img
                 src={service.image}
@@ -162,8 +170,8 @@ const SectionFour = () => {
         </div>
 
         <button className="text-center my-10 py-3 px-8 rounded-3xl text-sm bg-[#0065B3] hover:bg-[#FFA61A] transition-all hover:duration-200 text-white  hover:text-[#0065B3]">
-        Veiw All Services
-      </button>
+          Veiw All Services
+        </button>
       </div>
     </div>
   );
