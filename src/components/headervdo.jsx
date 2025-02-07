@@ -1,9 +1,14 @@
 import React from "react";
-import headervdo from "../assets/videos/vdo-2.mp4";
-const HeadeVdo = () => {
+import PhoneInTalkIcon from '@mui/icons-material/PhoneInTalk';
+import headervdo from "../assets/videos/baby-care-2.mp4";
+import { motion, useScroll, useTransform } from "framer-motion";
+const HeadVdo = () => {
+  const { scrollY } = useScroll();
+  const y = useTransform(scrollY, [0, 1000], [0, -500]);
+  const x = useTransform(scrollY, [0, 500], [-25, 25]);
   return (
     <div
-      className="w-full flex justify-center items-center relative h-[95vh] overflow-hidden"
+      className="w-full flex justify-center items-center relative h-[95vh] mb-10 overflow-hidden"
       style={{
         clipPath: "ellipse(160% 90% at 50% 8%)",
       }}
@@ -12,17 +17,17 @@ const HeadeVdo = () => {
         autoPlay
         playsInline
         loop
+        muted
         className="absolute top-0 left-0 w-full h-full object-cover"
       >
         <source src={headervdo} type="video/mp4" />
       </video>
-      <div className="absolute text-[#EFF7F7] top-[2%] p-8 left-[-60px]">
+      <motion.div style={{ y }}       transition={{ type: "spring", stiffness: 100, damping: 20 }} className="absolute text-[#ddffff] top-[2%] p-8 xl:left-[-60px] lg:left-[-120px] md:left-[-120px]">
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          width="450"
-          height="400"
           viewBox="0 0 466 418"
           fill="none"
+          className=" hidden md:block xl:w-[450px] xl:h-[400px] lg:w-[350px] lg:h-[300px] md:w-[250px] md:h-[200px]"
         >
           <path
             d="M0.734111 417.806C35.3104 416.294 68.5641 405.332 100.117 391.913C131.859 378.494 164.357 363.186 188.164 337.482C200.823 323.686 210.459 307.432 219.906 291.367C228.975 275.869 238.233 260.183 247.492 244.685C266.008 213.69 284.902 182.505 305.874 153.022C326.658 123.916 350.087 96.3229 377.105 72.8873C380.506 70.0524 383.718 67.2175 387.119 64.3825C387.875 63.8155 386.93 62.6815 386.363 63.2485C358.778 85.1721 335.16 111.821 313.81 139.792C292.271 167.953 273.188 198.003 254.86 228.431C245.602 243.74 236.533 259.427 226.897 274.735C217.072 290.422 207.436 306.298 196.288 321.04C185.33 335.592 172.482 348.066 157.744 358.461C143.385 368.667 127.703 376.794 111.643 384.164C80.2784 398.528 47.7805 411.569 13.2043 415.916C9.04754 416.483 4.7019 416.861 0.545187 417.05C-0.210579 416.672 -0.210596 417.995 0.734111 417.806Z"
@@ -81,15 +86,16 @@ const HeadeVdo = () => {
             fill="currentColor"
           ></path>
         </svg>
-      </div>
-      <div>
-        <div class="absolute text-[#EFF7F7] right-[-50px] p-8 bottom-[5%] ">
+      </motion.div>
+        <div class="absolute text-[#ddffff] right-[-70px] p-8 bottom-[5%] ">
+      <motion.div style={{ x}}       transition={{ type: "spring", stiffness: 100, damping: 20 }} >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="217"
             height="272"
             viewBox="0 0 217 272"
             fill="none"
+            className=" hidden md:block xl:w-[220px] xl:h-[275px] lg:w-[180px] lg:h-[220px] md:w-[150px] md:h-[180px]"
           >
             <path
               d="M39.1442 118.305C39.0793 117.397 38.7549 116.618 38.4305 115.775C37.0678 112.271 35.835 108.767 34.667 105.198C34.5372 104.744 34.2777 104.355 34.5372 103.771C35.7052 103.316 36.9381 103.9 38.106 104.03C42.8428 104.679 47.6445 105.393 52.4461 105.847C53.679 105.977 54.9118 106.236 56.1447 106.107C56.6638 106.431 57.3126 106.496 57.9615 106.496C59.973 106.496 61.9845 106.755 63.996 106.885C67.3053 107.08 70.6794 107.339 73.9887 107.404C82.8782 107.599 91.8326 107.664 100.722 107.08C103.772 107.145 106.822 106.691 109.806 106.431C111.493 106.496 113.181 106.171 114.868 106.042C117.268 105.912 119.669 105.652 122.135 105.458C124.601 105.263 127.066 105.198 129.597 105.198C133.88 105.198 138.162 105.652 142.38 106.561C142.834 106.691 143.288 106.691 143.742 106.755C143.872 106.95 144.132 107.015 144.326 107.015C145.819 107.534 147.311 107.988 148.739 108.637C156.72 112.076 162.949 117.657 168.27 124.34C172.812 130.115 176.51 136.344 179.82 142.963C183.194 149.776 186.503 156.589 189.877 163.337C192.148 167.944 194.744 172.356 197.729 176.574C199.026 178.456 200.454 180.208 201.946 181.96C204.607 184.945 207.786 187.216 211.225 189.227C213.107 190.33 214.988 191.628 217 192.536C217 194.223 217 195.846 217 197.533C214.405 197.598 211.874 197.078 209.278 196.819C207.202 196.624 205.191 196.3 203.114 195.975C199.351 195.456 195.522 194.937 191.759 194.353C188.06 193.769 184.427 193.185 180.728 192.536C176.835 191.887 172.877 191.174 168.983 190.525C164.441 189.746 159.899 188.968 155.357 188.189C151.334 187.54 147.311 186.826 143.288 186.177C140.044 185.658 136.864 185.074 133.62 184.685C131.089 184.361 128.624 183.841 126.158 183.452C120.188 182.414 114.284 181.181 108.379 179.754C107.341 179.494 106.302 178.975 105.199 179.105C104.68 178.65 104.096 178.586 103.512 178.456C100.657 177.612 97.8022 176.704 94.9472 175.666C90.2104 173.914 85.5386 171.967 81.0613 169.436C78.4659 167.944 75.9353 166.322 73.4047 164.765C69.2519 161.65 65.2938 158.341 61.7899 154.577C58.9348 151.593 56.3393 148.348 53.9385 145.039C49.656 139.134 46.0871 132.775 42.9077 126.157C41.8695 123.951 40.9611 121.68 39.9878 119.473C39.6633 118.889 39.5335 118.5 39.1442 118.305Z"
@@ -104,20 +110,33 @@ const HeadeVdo = () => {
               fill="currentColor"
             ></path>
           </svg>{" "}
+      </motion.div>
         </div>
-      </div>
       <div className="absolute flex flex-col items-center text-center">
-        <p className="px-5 py-[1px] rounded-3xl text-black text- bg-[#EFF7F7] uppercase">
+        <p className="px-5  py-[2px] mb-8 text-sm rounded-3xl tracking-wide text-black text- bg-[#EFF7F7] uppercase">
           Making Miracles Possible
         </p>
-        <h1 className="text-[5rem] leading-[5rem] text-white font-custom">
-          Your journey to <br></br>
-          <i>parenthood</i> starts here
+        <div className="lg:mt-5 md:mt-3">
+        <h1 className="lg:text-[2.5rem] md:text-[2rem] lg:leading-[2.5rem] xl:text-[3.8rem] xl:leading-[4.3rem] text-[1.5rem] md:leading-[2.3rem] leading-[1.5rem] text-white font-custom">
+        “Welcome to the Journey of becoming a Parent, <br></br>
+        where You & Science can create a little Miracle
         </h1>
-        <h4 className="text-[2rem] leading-[2rem] mt-5 text-white font-custom"> From conception to pregnancy and beyond.</h4>
+        <h4 className="md:text-[1.8rem] text-[1.3rem] leading-[2rem] my-5 text-white font-custom">
+          {" "}
+          From conception to pregnancy and beyond.
+        </h4>
+        </div>
+        <div className="flex items-center justify-center gap-1 mt-2 md:mt-5">
+          <button
+            className="rounded-[30px] px-10 py-4 text-xs tracking-[3px] bg-[#0065B3] hover:bg-[#FFA61A] transition-all hover:duration-200 text-white  hover:text-[#0065B3] font-medium md:mt-5 "
+          >
+            SCHEDUL A VISIT
+          </button>
+          <button className="px-10 py-4 md:text-3xl hidden md:block text-white mt-5 font-serif" ><PhoneInTalkIcon sx={{ color: "#DDEFEF", fontSize:"40px" , paddingRight:"10px"}} /> <a href="tel:18002001234">1800 255 1234</a>  </button>
+        </div>
       </div>
     </div>
   );
 };
 
-export default HeadeVdo;
+export default HeadVdo;
