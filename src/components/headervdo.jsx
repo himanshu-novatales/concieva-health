@@ -8,7 +8,7 @@ const HeadVdo = () => {
   const x = useTransform(scrollY, [0, 500], [-25, 25]);
   return (
     <div
-      className="w-full flex justify-center items-center relative h-[95vh] mb-10 overflow-hidden"
+      className="w-full flex justify-center items-center relative h-[80vh] md:h-[90vh] 2xl:h-[95vh] mb-10 overflow-hidden"
       style={{
         clipPath: "ellipse(160% 90% at 50% 8%)",
       }}
@@ -26,7 +26,7 @@ const HeadVdo = () => {
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 466 418"
-          fill="none"
+          fill="none" 
           className=" hidden md:block xl:w-[450px] xl:h-[400px] lg:w-[350px] lg:h-[300px] md:w-[250px] md:h-[200px]"
         >
           <path

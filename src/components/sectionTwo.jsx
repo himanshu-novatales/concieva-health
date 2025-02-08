@@ -1,26 +1,43 @@
 import React from "react";
-import image2 from "../assets/images/baby-care-3.avif";
-import image3 from "../assets/images/baby-care-6.avif";
+import image2 from "../assets/images/new-image-4.jpg";
+import image3 from "../assets/images/new-image-6.jpg";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 const SectionTwo = () => {
   return (
     <>
-      <div className="flex flex-col xl:flex-row justify-center items-center gap-10 xl:gap-20 mt-[8%]  px-4">
+      <div
+        className="flex flex-col xl:flex-row h-full justify-center items-center pb-28 gap-10 bg-transparent -z-0 bg-gradient-to-b from-transparent to-[#FBF9F6]
+ xl:gap-32 mt-[8%]  px-4"
+        style={{
+          zIndex: "-999",
+        }}
+      >
         {/* Image Section */}
-        <div className="w-full lg:w-[90%] xl:w-[35%] 2xl:w-[25%] relative">
+        <div className="w-full lg:w-[90%] xl:w-[38%] 2xl:w-[30%] relative">
           <img
             src={image2}
-            className="rounded-xl object-cover w-full h-auto lg:h-[720px] xl:h-[560px]"
+            className="rounded-xl object-cover w-full  h-[400px] md:h-[550px] lg:h-[720px] z-50 xl:h-[650px]"
             alt="sectionTwo"
+            style={{
+              zIndex: "999",
+            }}
           />
-          <div className="hidden md:block absolute xl:top-10 lg:top-[14rem] md:top-10 -z-10 left-[-40px]">
+          <div
+            className="hidden md:block absolute xl:top-[12.5rem] md:top-[5rem] lg:top-[14rem] left-[-210px]"
+            style={{
+              zIndex: "-10",
+            }}
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              width="371"
-              height="549"
+              width="601"
+              height="509"
               viewBox="0 0 371 549"
               fill="none"
-              color="#DDEFEF"
+              color="#c5f2f7"
+              style={{
+                zIndex: "-1",
+              }}
             >
               <path
                 d="M309.32 510.766C251.706 549.066 47.0925 579.537 6.63577 494.26C-33.821 408.984 117.203 -84.6883 283.266 12.6496C436.197 102.158 351.471 482.834 309.32 510.766Z"
@@ -45,8 +62,8 @@ const SectionTwo = () => {
           </div>
         </div>
         {/* Text Section */}
-        <div className="w-full lg:w-[90%] xl:w-[30%]  text-left">
-          <p className="px-4 py-1 bg-[#EFF7F7] mx-auto xl:mx-0 w-max text-sm text-[#94857B] uppercase  rounded-[30px]">
+        <div className="w-full flex flex-col gap-2 xl:gap-6 lg:w-[90%] xl:w-[30%]  text-left ">
+          <p className="px-4 py-1 bg-[#EFF7F7] mx-auto xl:mx-0 w-max text-sm text-[#94857B] font-bold font-paragraph rounded-[30px]">
             About The Clinic
           </p>
           {/* Heading */}
@@ -59,31 +76,34 @@ const SectionTwo = () => {
           </h3>
 
           {/* Description */}
-          <p className="text-sm md:text-[17px] mt-6 md:mt-10 leading-relaxed">
+          <p className="text-sm font-paragraph  md:text-[17px] mt-6 md:mt-10 leading-relaxed">
             At Conceiva Fertility Center, we provide personalized and advanced
             fertility treatments. Our treatments are planned to meet your every
             need. We are highly dedicated and committed to be there with you at
             every stage of your fertility journey. With utmost care, we ensure
-            that you feel confident at every step
+            that you feel confident at every step.
           </p>
 
           {/* Button */}
           <div className="flex justify-center xl:justify-start">
-            <button className="py-3 bg-[#0065B3] hover:bg-[#FFA61A] transition-all hover:duration-200 text-white  hover:text-[#0065B3] mt-6 md:mt-10 px-6 lg:px-10 rounded-3xl">
-              FIND OUT MORE
+            <button className="py-3 bg-[#0065B3] font-paragraph  hover:bg-[#FFA61A] transition-all hover:duration-200 text-white  hover:text-[#0065B3] mt-6 md:mt-10 px-6 lg:px-10 rounded-3xl">
+              Find Out More
             </button>
           </div>
         </div>
       </div>
-      <div className="flex flex-col xl:flex-row-reverse justify-center  items-center gap-10 xl:gap-20 mt-[15%] mb-[5%] px-4">
+      <div
+        className="flex flex-col xl:flex-row-reverse justify-center bg-transparent bg-gradient-to-b from-transparent to-[#FBF9F6]
+ pb-32 items-center gap-20 xl:gap-20 mt-[8%] mb-[5%] px-4"
+      >
         {/* Image Section */}
-        <div className="w-full lg:w-[90%] xl:w-[35%] 2xl:w-[25%] relative">
+        <div className="w-full lg:w-[90%] xl:w-[38%] 2xl:w-[30%] relative">
           <img
             src={image3}
-            className="rounded-xl object-cover w-full h-auto lg:h-[720px] xl:h-[580px]"
+            className="rounded-xl object-cover w-full h-[400px] md:h-[550px] lg:h-[720px] z-50 xl:h-[650px]"
             alt="sectionTwo"
           />
-          <div className="absolute hidden md:block top-[-50px] left-[-50px] -z-50">
+          <div className="absolute hidden md:block top-[-50px] left-[-60px] -z-[10]">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="467"
@@ -115,7 +135,7 @@ const SectionTwo = () => {
           </div>
         </div>
         {/* Text Section   #8FB4BA */}
-        <div className="w-full lg:w-[90%] xl:w-[30%]  text-left">
+        <div className="w-full bg-transparent lg:w-[90%] xl:w-[32%] flex flex-col gap-2  text-left">
           {/* Heading */}
           <h3 className="hidden xl:block text-4xl md:text-5xl 2xl:text-6xl font-custom mt-7">
             Experience the Best <i> Fertility Care</i>
@@ -124,67 +144,105 @@ const SectionTwo = () => {
           <h3 className="block xl:hidden text-3xl md:text-5xl font-custom mt-5">
             Experience the Best <i> Fertility Care</i>
           </h3>
-          <p className="my-2">
+          <p className="my-2 font-paragraph">
             At Conceiva, we are committed to providing you with the utmost care
             and all the support you need. Explore how your fertility journey
             will be with us-
           </p>
           {/* Description */}
-          <ul className="text-sm md:text-base mt-2 md:mt-4 leading-relaxed">
-            <li className="py-3 border-b-2">
-              <CheckCircleIcon
-                sx={{
-                  color: "#0065B3",
-                  borderRadius: "50%",
-                  marginRight: "10px",
-                }}
-              />
-              <span className="font-medium">Advanced Technology:</span> Modern technologies for the best results
+          <ul className="text-sm md:text-base  mt-2 md:mt-4 leading-relaxed">
+            <li className="py-3 border-b-2 flex items-center flex-row">
+              <div>
+                <CheckCircleIcon
+                  sx={{
+                    color: "#0065B3",
+                    borderRadius: "50%",
+                    marginRight: "10px",
+                  }}
+                />
+              </div>
+              <div>
+                {" "}
+                <span className="font-medium">Advanced Technology:</span>{" "}
+                <span className="font-paragraph">
+                  Technologies for the best results Modern
+                </span>
+              </div>{" "}
             </li>
-            <li className="py-3 border-b-2">
-              <CheckCircleIcon
-                sx={{
-                  color: "#0065B3",
-                  borderRadius: "50%",
-                  marginRight: "10px",
-                }}
-              />
-              <span className="font-medium">Proven success rate</span>: Happy families
+            <li className="py-3 border-b-2 flex  flex-row">
+              <div>
+                {" "}
+                <CheckCircleIcon
+                  sx={{
+                    color: "#0065B3",
+                    borderRadius: "50%",
+                    marginRight: "10px",
+                  }}
+                />
+              </div>
+              <div>
+                <span className="font-medium">Proven success rate</span>:{" "}
+                <span className="font-paragraph">Happy families.</span>
+              </div>
             </li>
-            <li className="py-3 border-b-2">
-              <CheckCircleIcon
-                sx={{
-                  color: "#0065B3",
-                  borderRadius: "50%",
-                  marginRight: "10px",
-                }}
-              />
-              <span className="font-medium"> Compassionate experts</span>
-            : Experienced professionals treating you like a family
+            <li className="py-3 border-b-2 flex  flex-row">
+              <div>
+                {" "}
+                <CheckCircleIcon
+                  sx={{
+                    color: "#0065B3",
+                    borderRadius: "50%",
+                    marginRight: "10px",
+                  }}
+                />
+              </div>
+              <div>
+                {" "}
+                <span className="font-medium"> Compassionate experts</span>:
+                <span className="font-paragraph">
+                  {" "}
+                  Experienced professionals treating you like a family
+                </span>
+              </div>
             </li>
-            <li className="py-3 border-b-2">
-              <CheckCircleIcon
-                sx={{
-                  color: "#0065B3",
-                  borderRadius: "50%",
-                  marginRight: "10px",
-                }}
-              />
-                   <span className="font-medium">Personalised care</span>
-             : choose your treatment according to your needs where care is 
-             guaranteed
+            <li className="py-3 border-b-2 flex  flex-row">
+              <div>
+                {" "}
+                <CheckCircleIcon
+                  sx={{
+                    color: "#0065B3",
+                    borderRadius: "50%",
+                    marginRight: "10px",
+                  }}
+                />
+              </div>
+              <div>
+                <span className="font-medium">Personalised care</span>:
+                <span className="font-paragraph">
+                  {" "}
+                  choose your treatment according to your needs where care is
+                  guaranteed
+                </span>
+              </div>
             </li>
-            <li className="py-3 border-b-2">
-              <CheckCircleIcon
-                sx={{
-                  color: "#0065B3",
-                  borderRadius: "50%",
-                  marginRight: "10px",
-                }}
-              />   <span className="font-medium">Supportive Environment</span>:
-              Supportive Environment: our team always make you feel comfortable
+            <li className="py-3 border-b-2 flex flex-row">
+              <div>
+                <CheckCircleIcon
+                  sx={{
+                    color: "#0065B3",
+                    borderRadius: "50%",
+                    marginRight: "10px",
+                  }}
+                />{" "}
+              </div>
+              <div>
+                <span className="font-medium">Supportive Environment</span>:
+                <span className="font-paragraph">
+                  Supportive Environment: our team always make you feel
+                  comfortable
+                </span>
+              </div>
             </li>
-            
           </ul>
         </div>
       </div>

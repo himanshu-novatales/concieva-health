@@ -2,15 +2,15 @@ import React from "react";
 import ArrowForwardOutlinedIcon from '@mui/icons-material/ArrowForwardOutlined';
 const SectionOne = () => {
   return (
-    <div className="flex flex-col xl:flex-row justify-center items-center text-center xl:text-left gap-10 my-[4rem] xl:my-[6rem] ">
+    <div className="flex flex-col xl:flex-row justify-center items-center text-center xl:text-left gap-32 my-[4rem] xl:my-[6rem] ">
       <div>
         <h1 className="md:text-4xl lg:text-5xl xl:text-6xl text-3xl font-custom">
           Begin your <br></br>fertility journey
         </h1>
       </div>
-      <div className="flex flex-wrap justify-center px-4 md:px-0 items-center gap-3">
-        <div className="border-[1px] rounded-xl  flex justify-center items-center  hover:scale-105 transition-all hover:duration-500 w-full md:w-60 h-60 hover:bg-[#f2efe9] bg-[#FBF9F6]">
-          <div className="flex flex-col items-center text-center gap-2">
+      <div className="flex flex-wrap justify-center px-4 md:px-0 items-center gap-5">
+        <div className="border-[1px] rounded-xl  flex justify-center items-center  hover:scale-105 transition-all hover:duration-500 w-full md:w-60 h-60 hover:bg-[#f2efe9] bg-[#FBF9F6] group">
+          <div className="flex flex-col items-center text-center gap-6">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="51"
@@ -39,17 +39,17 @@ const SectionOne = () => {
                 </clipPath>
               </defs>
             </svg>
-            <p className="font-semibold text-xl xl:text-2xl">
+            <p className="font-semibold font-paragraph text-xl xl:text-2xl">
               Screening <br></br>Test
             </p>
-            <a className="text-xs my-2 uppercase text-[#5bc4c4]" href="#d">Know More <ArrowForwardOutlinedIcon sx={{
+            <a className="text-xs my-2 uppercase text-[#0065B3]  group-hover:text-[#FFA61A]" href="#d">Know More <ArrowForwardOutlinedIcon sx={{
                 fontSize:"12px",
                 marginLeft:"4px", 
             }} /></a>
           </div>
         </div>
-        <div className="border-[1px] rounded-xl flex justify-center items-center  hover:scale-105 transition-all hover:duration-500 w-full md:w-60 h-60 hover:bg-[#f2efe9] bg-[#FBF9F6]">
-          <div className="flex flex-col items-center text-center gap-2">
+        <div className="border-[1px] rounded-xl flex justify-center items-center  hover:scale-105 transition-all hover:duration-500 w-full md:w-60 h-60 hover:bg-[#f2efe9] bg-[#FBF9F6] group">
+          <div className="flex flex-col items-center text-center gap-6">
           <svg
           xmlns="http://www.w3.org/2000/svg"
           width="51"
@@ -74,17 +74,17 @@ const SectionOne = () => {
             </clipPath>
           </defs>
         </svg>
-            <p className="font-semibold text-xl xl:text-2xl">
+            <p className="font-semibold font-paragraph text-xl xl:text-2xl">
               Fertility <br></br>Services
             </p>
-            <a className="text-xs my-2 uppercase text-[#5bc4c4]" href="#d">Know More <ArrowForwardOutlinedIcon sx={{
+            <a className="text-xs my-2 uppercase text-[#0065B3]  group-hover:text-[#FFA61A] transition-all hover:duration-200" href="#d">Know More <ArrowForwardOutlinedIcon sx={{
                 fontSize:"12px",
                 marginLeft:"4px", 
             }} /></a>
           </div>
         </div>
-        <div className="border-[1px] rounded-xl flex justify-center items-center  hover:scale-105 transition-all hover:duration-500 w-full md:w-60 h-60 hover:bg-[#f2efe9] bg-[#FBF9F6]">
-          <div className="flex flex-col items-center text-center gap-2">
+        <div className="border-[1px] rounded-xl flex justify-center items-center  hover:scale-105 transition-all hover:duration-500 w-full md:w-60 h-60 hover:bg-[#f2efe9] bg-[#FBF9F6] group">
+          <div className="flex flex-col items-center text-center gap-6">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="51"
@@ -113,10 +113,10 @@ const SectionOne = () => {
               </clipPath>
             </defs>
           </svg>
-            <p className="font-semibold text-xl xl:text-2xl">
+            <p className="font-semibold font-paragraph text-xl xl:text-2xl">
               Surgical <br></br>Services{" "}
             </p>
-            <a className="text-xs my-2 uppercase text-[#5bc4c4]" href="#d">Know More  <ArrowForwardOutlinedIcon sx={{
+            <a className="text-xs my-2 uppercase text-[#0065B3]  group-hover:text-[#FFA61A] transition-all hover:duration-200" href="#d">Know More  <ArrowForwardOutlinedIcon sx={{
                 fontSize:"12px",
                 marginLeft:"4px", 
             }} /></a>

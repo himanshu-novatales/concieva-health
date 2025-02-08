@@ -7,7 +7,14 @@ const SectionThree = () => {
     once: true,
     margin: "-20% 0px -20% 0px",
   });
+  const targetRef = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: targetRef,
+    offset: ["start end", "end start"], // Adjust offset as needed
+  });
 
+  // Mapping scroll progress (0 to 1) to x translation (e.g., from -200px to 200px)
+  const x = useTransform(scrollYProgress, [0, 1], [-200, 300]);
   const data = [
     { age: "> 35", value: 87 },
     { age: "35-37", value: 60 },
@@ -16,31 +23,31 @@ const SectionThree = () => {
     { age: "43-45", value: 43 },
     { age: "45 <", value: 48 },
   ];
-  const { scrollY } = useScroll();
-  const y = useTransform(scrollY, [0, 50], [0, -150]);
+  
+
 
   return (
     <div className="flex flex-col items-center mt-[10%] relative">
       <p className="px-4 py-1 mb-10 bg-[#EFF7F7] w-52 text-sm text-[#94857B] font-bold rounded-[30px]">
         Outstanding Success Rates
       </p>
-      <h3 className="hidden xl:block text-4xl md:text-5xl 2xl:text-6xl font-custom mt-5">
+      <h3 className="hidden xl:block text-4xl md:text-5xl 2xl:text-6xl font-custom my-5">
       Certifications & Accreditations
       </h3>
       <h3 className="block xl:hidden text-3xl text-center font-medium  font-custom mt-5">
       Certifications & Accreditations
       </h3>
-      <div className="flex flex-col lg:flex-row gap-0 p-5 md:mb-5 mt-5">
+      <div className="flex flex-col lg:flex-row gap-8 p-5 md:mb-5 mt-5">
         {/* Text Section */}
-        <div className="text-center flex flex-col sm:flex-row gap-2 items-center">
-          <div className="text-left w-full lg:w-72">
+        <div className="text-center flex flex-col sm:flex-row gap-12 items-center">
+          <div className="text-left w-full lg:w-80">
             <h1 className="text-8xl font-custom my-5 text-[#0065B3]">52%</h1>
             <h1 className="text-[21px]">Live birth rate for PGS treatment</h1>
             <h3>All ages average</h3>
           </div>
           <div className="text-left w-full mr-3">
             <h1 className="text-8xl font-custom my-5 text-[#0065B3]">35%</h1>
-            <h1 className="text-[18px]">
+            <h1 className="text-[21px]">
               Live birth rates for IVF/IMSI/ICSI/PIMSI treatment
             </h1>
             <h3>All ages average</h3>
@@ -86,8 +93,8 @@ const SectionThree = () => {
         </div>
       </div>
       <motion.div
-        style={{ y }}
-        transition={{ type: "spring", stiffness: 100, damping: 20 }}
+          style={{ x }}
+          transition={{ type: "spring", stiffness: 100, damping: 20 }}
         className="absolute text-[#8cbfe665] bottom-[2%] p-8 xl:left-[-60px] lg:left-[-120px] lg:top-1 xl:top-[3rem] md:left-[-100px] md:bottom-[-8rem]"
       >
         <svg

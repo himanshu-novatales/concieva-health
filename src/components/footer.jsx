@@ -9,7 +9,7 @@ const Footer = () => {
   return (
     <div className="mt-20 2xl:mt-40 bg-[#FBF9F6]">
       {" "}
-      <div className="flex flex-col justify-center items-center xl:flex-row xl:gap-8 mx-2 pb-16  ">
+      <div className="flex flex-col justify-center items-center xl:flex-row xl:gap-4 mx-2 pb-16  ">
         <div className=" flex flex-col justify-center items-center xl:items-start mt-10 w-full xl:w-1/4">
           <div className="my-5">
             <img src={logo} className="w-44" alt="Logo" />
@@ -36,7 +36,7 @@ const Footer = () => {
             </p>
           </div>
         </div>
-        <div className="flex flex-col md:flex-row justify-between w-[80%] xl:w-[40%] mt-2 xl:mt-16 ">
+        <div className="flex flex-col md:flex-row justify-around w-[80%] xl:w-[40%] mt-2 xl:mt-16 ">
           <div className="w-full md:w-1/2 text-center xl:text-left">
             <h4 className="text-[#94857B] font-semibold uppercase py-5">
               Pages
@@ -132,10 +132,10 @@ const Footer = () => {
             </ul>
           </div>
         </div>
-        <div className="w-full flex flex-col gap-5 xl:gap-0 md:w-1/2 mb-8 xl:mb-0 xl:w-1/4 mt-8  xl:mt-16 text-center xl:text-left">
+        <div className="w-full flex flex-col gap-5 xl:gap-0 md:w-1/2 mb-8 xl:mb-0 xl:w-1/4 mt-8  xl:mt-16 text-center xl:text-right">
           <h1 className="text-4xl font-custom">Reach out to us</h1>
           <h3 className="text-2xl">any queries? Just give us a mail</h3>
-          <div className="my-3 xl:my-8 flex flex-row flex-wrap md:flex-nowrap  md:gap-0 justify-center xl:justify-start items-center">
+          <div className="my-3 xl:my-8 flex flex-row flex-wrap md:flex-nowrap  md:gap-0 justify-center xl:justify-end items-center xl:text-right">
             <input
               type="email"
               placeholder="Enter your email address"
@@ -145,7 +145,7 @@ const Footer = () => {
               Subscribe
             </button>
           </div>
-          <div className=" flex flex-row justify-center xl:justify-start gap-6 mt-4 xl:mt-1 text-center xl:text-left">
+          <div className=" flex flex-row justify-center xl:justify-end gap-6 mt-4 xl:mt-1 text-center xl:text-left">
             <FacebookIcon
               sx={{
                 fontSize: "24px",
