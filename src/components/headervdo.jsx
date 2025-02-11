@@ -9,7 +9,7 @@ const HeadVdo = () => {
   const x = useTransform(scrollY, [0, 500], [-25, 25]);
   return (
     <div
-      className="w-full flex justify-center items-center relative h-[95vh] mb-10 overflow-hidden"
+      className="w-full flex justify-center items-center relative h-[80vh] md:h-[90vh] xl:h-[95vh] mb-10 overflow-hidden"
       style={{
         clipPath: "ellipse(160% 90% at 50% 8%)",
       }}
@@ -24,11 +24,11 @@ const HeadVdo = () => {
         <source src={headervdo} type="video/mp4" />
       </video> */}
       <img src={bannerImage} alt="" className="absolute top-0 left-0 w-full h-full object-cover" />
-      <motion.div style={{ y }}       transition={{ type: "spring", stiffness: 100, damping: 20 }} className="absolute text-[#ddffff] top-[2%] p-8 xl:left-[-60px] lg:left-[-120px] md:left-[-120px]">
+      <motion.div style={{ y }}       transition={{ type: "spring", stiffness: 100, damping: 20 }} className="absolute text-[#ddffff] top-[2%] xl:top-[-30px] p-8 xl:left-[-160px] lg:left-[-120px] md:left-[-120px]">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 466 418"
-          fill="none"
+          fill="none" 
           className=" hidden md:block xl:w-[450px] xl:h-[400px] lg:w-[350px] lg:h-[300px] md:w-[250px] md:h-[200px]"
         >
           <path

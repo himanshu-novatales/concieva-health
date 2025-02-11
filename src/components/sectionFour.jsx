@@ -1,85 +1,85 @@
-import React from "react";
+import React, { useContext, useRef } from "react";
 import LocalHospitalIcon from "@mui/icons-material/LocalHospital";
-import service1 from "../assets/images/baby-care-2.jpg";
-import service2 from "../assets/images/baby-care-4.avif";
-import service3 from "../assets/images/baby-care-1.jpg";
-import service4 from "../assets/images/baby-care-8.avif";
-import service5 from "../assets/images/baby-care-9.avif";
-import service6 from "../assets/images/baby-care-10.avif";
-import service7 from "../assets/images/baby-care-11.avif";
-import service8 from "../assets/images/baby-care-16.avif";
 import { useLocation } from "react-router-dom";
 import { motion, useScroll, useTransform } from "framer-motion";
+import { AppContext } from "../context/DataContext";
 const SectionFour = () => {
   const location = useLocation();
   const isHomePage = location.pathname === "/";
+  const {data} = useContext(AppContext)
 
-  const { scrollY } = useScroll();
-  const y = useTransform(scrollY, [0, 1000], [0, -500]);
-  const services = [
-    {
-      icon: LocalHospitalIcon,
-      image: service1,
-      title: "IUI",
-      description:
-        "Intrauterine Insemination is a procedure to improve fertility by artificially placing sperms in the uterus ",
-    },
-    {
-      icon: LocalHospitalIcon,
-      image: service2,
-      title: "IVF",
-      description:
-        "The process involves the fertilization of the egg outside the female body and the transplanting of the embryo back into the uterus. ",
-    },
-    {
-      icon: LocalHospitalIcon,
-      image: service3,
-      title: "ICSI",
-      description:
-        "The process involves injecting a single sperm into an egg outside the body.",
-    },
-    {
-      icon: LocalHospitalIcon,
-      image: service4,
-      title: "PICSI",
-      description: " more advanced process of using ICSI. ",
-    },
-    {
-      icon: LocalHospitalIcon,
-      image: service5,
-      title: "Egg Freezing",
-      description:
-        " Process of retrieving and freezing the women’s eggs for utilisation in the future.",
-    },
-    {
-      icon: LocalHospitalIcon,
-      image: service6,
-      title: "Blastocyst Culture",
-      description:
-        "A process where embryos are cultivated for a long period and transferred to the most capable embryo",
-    },
-    {
-      icon: LocalHospitalIcon,
-      image: service7,
-      title: "Female Fertility",
-      description:
-        "Improve the fertility rate with proven tests and treatment designs especially for female reproductive health ",
-    },
-    {
-      icon: LocalHospitalIcon,
-      image: service8,
-      title: "Male Fertility",
-      description:
-        "Complete diagnosis for males to detect fertility issues with proven tests and treatment options.",
-    },
-  ];
-  const displayedServices = isHomePage ? services : services.slice(0, 4);
+  // Moves up as you scroll
+  const ref = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start end", "end start"], // Adjust scroll effect
+  }); 
+  const x = useTransform(scrollYProgress, [0, 1], [300, -400]);
+console.log(data)
+  // const services = [
+  //   {
+  //     icon: LocalHospitalIcon,
+  //     image: service1,
+  //     title: "IUI",
+  //     description:
+  //       "Intrauterine Insemination is a procedure to improve fertility by artificially placing sperms in the uterus ",
+  //   },
+  //   {
+  //     icon: LocalHospitalIcon,
+  //     image: service2,
+  //     title: "IVF",
+  //     description:
+  //       "The process involves the fertilization of the egg outside the female body and the transplanting of the embryo back into the uterus. ",
+  //   },
+  //   {
+  //     icon: LocalHospitalIcon,
+  //     image: service3,
+  //     title: "ICSI",
+  //     description:
+  //       "The process involves injecting a single sperm into an egg outside the body.",
+  //   },
+  //   {
+  //     icon: LocalHospitalIcon,
+  //     image: service4,
+  //     title: "PICSI",
+  //     description: " more advanced process of using ICSI. ",
+  //   },
+  //   {
+  //     icon: LocalHospitalIcon,
+  //     image: service5,
+  //     title: "Egg Freezing",
+  //     description:
+  //       " Process of retrieving and freezing the women’s eggs for utilisation in the future.",
+  //   },
+  //   {
+  //     icon: LocalHospitalIcon,
+  //     image: service6,
+  //     title: "Blastocyst Culture",
+  //     description:
+  //       "A process where embryos are cultivated for a long period and transferred to the most capable embryo",
+  //   },
+  //   {
+  //     icon: LocalHospitalIcon,
+  //     image: service7,
+  //     title: "Female Fertility",
+  //     description:
+  //       "Improve the fertility rate with proven tests and treatment designs especially for female reproductive health ",
+  //   },
+  //   {
+  //     icon: LocalHospitalIcon,
+  //     image: service8,
+  //     title: "Male Fertility",
+  //     description:
+  //       "Complete diagnosis for males to detect fertility issues with proven tests and treatment options.",
+  //   },
+  // ];
+  const displayedServices = isHomePage ? data.slice(0,8) : data.slice(0, 4);
   return (
-    <div className="flex justify-center items-center relative lg:mt-20 md:mt-10 mt-10 mb-5 2xl:mb-20 ">
+    <div className="flex justify-center items-center relative lg:mt-20 md:mt-10 mt-10 mb-5 2xl:mb-20 overflow-x-hidden ">
       <motion.div
-        style={{ y }}
+        className="absolute text-[#8cbfe665]  md:top-2 p-8 xl:right-[30px] lg:right-[60px]  md:right-[60px]"
+        style={{ x }}
         transition={{ type: "spring", stiffness: 100, damping: 20 }}
-        className="absolute text-[#8cbfe665] md:top-[35%] lg:top-[45%] p-8 xl:left-[-60px] lg:left-[-120px] md:left-[-120px]"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -143,34 +143,35 @@ const SectionFour = () => {
           Our service
         </h1>
         <div
-          className={`flex flex-row flex-wrap w-full ${
+          className={`flex flex-row flex-wrap w-full xl:px-1 ${
             isHomePage ? "2xl:w-[80%]" : ""
           }  items-center text-left justify-center gap-5 mt-20 sm:p-0 p-3`}
         >
           {displayedServices.map((service, index) => (
-            <div className=" md:h-[19rem] h-[18rem] w-full md:w-[19rem] rounded-xl relative">
+            <div key={index} className=" md:h-[19rem] h-[18rem] w-full md:w-[19rem] rounded-xl relative">
               <img
-                src={service.image}
+                src={service.hoverImage}
                 alt="servive-1"
                 className="object-cover w-full h-full rounded-xl"
               />
               <a href="#ds">
-                <div className="w-full h-full absolute top-0 border-[1px] border-[#e0e0e0] rounded-xl flex flex-col gap-3 p-3 bg-[#FBF9F6] hover:bg-[#0000006e] hover:text-white transition-all hover:duration-300 group">
+                <div className="w-full h-full absolute top-0 border-[1px] border-[#e0e0e0] rounded-xl flex flex-col md:gap-3 gap-2 p-3 bg-[#FBF9F6] hover:bg-[#0000006e] hover:text-white transition-all hover:duration-300 group">
                   <LocalHospitalIcon className="text-[#0065B3] group-hover:text-white text-7xl" />
-                  <h1 className="text-3xl font-custom font-bold my-5">
-                    {service.title}
+                  <h1 className="text-3xl font-custom  my-5">
+                    {service.maintitle}
                   </h1>
-                  <p className="mt-1 text-md text-[#4F4D4D] group-hover:text-white transition-colors duration-300">
-                    {service.description}
+                  <p className="mt-1 text-md text-[#4F4D4D] font-paragraph group-hover:text-white transition-colors duration-300">
+                    {service.about}
                   </p>
                 </div>
               </a>
             </div>
           ))}
         </div>
-        <button className="text-center my-10 py-3 px-8 rounded-3xl text-sm bg-[#0065B3] hover:bg-[#FFA61A] transition-all hover:duration-200 text-white  hover:text-[#0065B3]">
-          Veiw All Services
+        <button className="py-3 bg-[#0065B3] font-paragraph  hover:bg-[#FFA61A] transition-all hover:duration-200 text-white  hover:text-[#0065B3] mt-6 md:mt-10 px-6 lg:px-10 rounded-3xl">
+          View All Services
         </button>
+        
       </div>
     </div>
   );

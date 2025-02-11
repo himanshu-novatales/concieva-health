@@ -64,13 +64,13 @@ const ContactForm = () => {
   return (
     <div className="flex justify-center w-full">
       <div className="w-11/12 xl:w-1/2 flex flex-col gap-2 justify-center text-center border-[1px] rounded-3xl border-[#EBE6DE]  items-center">
-        <p className="px-4 py-1 mb-10 mt-5 bg-[#EFF7F7] text-sm uppercase text-[#94857B] font-bold rounded-[30px]">
-          Schedule your visit online
+        <p className="px-4 py-1 mb-10 mt-5 bg-[#EFF7F7] text-sm  text-[#94857B] font-paragraph font-bold rounded-[30px]">
+          Schedule Your Visit Online
         </p>
         <h1 className="text-3xl xl:text-6xl font-custom">
           Take the next step and schedule an appointment today
         </h1>
-        <p className="text-xl mt-4 text-[#4F4D4D]">
+        <p className="text-xl mt-4 text-[#4F4D4D] font-paragraph">
           It just takes a few minutes to book a visit online.
         </p>
         <section className="w-11/12 xl:w-10/12 p-6 rounded-md mt-8">
@@ -133,7 +133,8 @@ const ContactForm = () => {
                   fullWidth
                   id="name-1"
                   label="Name"
-                  required className="bg-[#FBF9F6]"
+                  required
+                  className="bg-[#FBF9F6]"
                   variant="outlined"
                 />
               </div>
@@ -144,7 +145,8 @@ const ContactForm = () => {
                   label="Phone Number"
                   required
                   type="number"
-                  variant="outlined" className="bg-[#FBF9F6]"
+                  variant="outlined"
+                  className="bg-[#FBF9F6]"
                 />
               </div>
               <div>
@@ -178,9 +180,9 @@ const ContactForm = () => {
               </div>
             </div>
             <div className="flex justify-center mt-6">
-            <button className="py-3 w-full bg-[#0065B3] hover:bg-[#FFA61A] transition-all hover:duration-200 text-white  hover:text-[#0065B3] mt-6 md:mt-10 px-6 lg:px-10 rounded-3xl">
-              Save
-            </button>
+              <button className="py-3 w-full bg-[#0065B3] hover:bg-[#FFA61A] transition-all hover:duration-200 text-white  hover:text-[#0065B3] mt-6 md:mt-10 px-6 lg:px-10 rounded-3xl">
+                Save
+              </button>
             </div>
           </form>
         </section>

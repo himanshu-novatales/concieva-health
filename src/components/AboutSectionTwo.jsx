@@ -1,5 +1,5 @@
 import React from "react";
-import aboutus2 from "../assets/images/aboutus-2.webp";
+import aboutus2 from "../assets/images/new-image-13.jpg";
 const AboutSectionTwo = () => {
   return (
     <div className="px-4 flex justify-center items-center my-5 xl:my-24">
@@ -8,7 +8,7 @@ const AboutSectionTwo = () => {
         {/* Left/Text Side */}
         <div className="xl:w-1/2 flex flex-col justify-center text-left p-8">
           <h1 className=" text-6xl md:text-8xl font-custom">About Us</h1>
-          <p className="text-justify text-lg xl:pe-20 my-3 text-[#4F4D4D]">
+          <p className="text-justify text-lg xl:pe-20 my-3 text-[#4F4D4D] font-paragraph">
             Our team of experienced medical professionals brings together a
             wealth of knowledge and expertise to deliver exceptional care. From
             routine wellness checkups to specialized treatments, we strive to
