@@ -1,6 +1,6 @@
 import React from "react";
 import PhoneInTalkIcon from '@mui/icons-material/PhoneInTalk';
-// import headervdo from "../assets/videos/baby-care-2.mp4";
+import headervdo from "../assets/videos/baby-care-2.mp4";
 import holdinghand from "../assets/images/holding-hand-2.jpg"
 import { motion, useScroll, useTransform } from "framer-motion";
 const HeadVdo = () => {
@@ -14,8 +14,8 @@ const HeadVdo = () => {
         clipPath: "ellipse(160% 90% at 50% 8%)",
       }}
     >
-      <img src={holdinghand} className="w-full h-full object-cover" alt="holoding" />
-      {/* <video
+      {/* <img src={holdinghand} className="w-full h-full object-cover" alt="holoding" /> */}
+      <video
         autoPlay
         playsInline
         loop
@@ -23,7 +23,7 @@ const HeadVdo = () => {
         className="absolute top-0 left-0 w-full h-full object-cover"
       >
         <source src={headervdo} type="video/mp4" />
-      </video> */}
+      </video>
       <motion.div style={{ y }}       transition={{ type: "spring", stiffness: 100, damping: 20 }} className="absolute text-[#ddffff] top-[2%] xl:top-[-30px] p-8 xl:left-[-160px] lg:left-[-120px] md:left-[-120px]">
         <svg
           xmlns="http://www.w3.org/2000/svg"

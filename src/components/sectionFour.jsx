@@ -157,7 +157,7 @@ console.log(data)
               <a href="#ds">
                 <div className="w-full h-full absolute top-0 border-[1px] border-[#e0e0e0] rounded-xl flex flex-col md:gap-3 gap-2 p-3 bg-[#FBF9F6] hover:bg-[#0000006e] hover:text-white transition-all hover:duration-300 group">
                   <LocalHospitalIcon className="text-[#0065B3] group-hover:text-white text-7xl" />
-                  <h1 className="text-4xl font-custom font-bold my-5">
+                  <h1 className="text-3xl font-custom  my-5">
                     {service.maintitle}
                   </h1>
                   <p className="mt-1 text-md text-[#4F4D4D] font-paragraph group-hover:text-white transition-colors duration-300">

@@ -1,9 +1,9 @@
 import React, { useRef } from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/autoplay";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination, Autoplay } from "swiper/modules";
 import "./swiper.css";
 import dr2 from "../assets/images/dr-image-2.jpg"
 import dr1 from "../assets/images/dr-image-1.jpg"

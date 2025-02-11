@@ -137,7 +137,7 @@ const Navbar = () => {
         initial={{ x: "100%" }} // Start from right (off-screen)
         animate={{ x: isOpen ? "0%" : "100%" }} // Slide in when open
         transition={{ type: "tween", duration: 0.4, ease: "easeInOut" }} // Smooth animation
-        className="fixed top-[125px] right-0 w-full sm:w-3/4 z-[999] h-screen bg-[#EFF7F7] shadow-md lg:hidden"
+        className="fixed top-[120px] right-0 w-full sm:w-3/4 z-[999] h-screen bg-[#EFF7F7] shadow-md lg:hidden"
       >
         <ul className="flex flex-col items-start gap-4 py-4 px-4 font-medium text-md text-gray-700">
           <li className="border-b-2 border-gray-400 w-full" onClick={()=> setIsOpen(false)}>
