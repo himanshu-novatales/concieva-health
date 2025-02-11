@@ -59,7 +59,7 @@ const SectionTwo = () => {
           </h3>
 
           {/* Description */}
-          <p className="text-sm md:text-[17px] mt-6 md:mt-10 leading-relaxed">
+          <p className="text-sm md:text-[17px] mt-6 md:mt-10 leading-relaxed font-paragraph">
             At Conceiva Fertility Center, we provide personalized and advanced
             fertility treatments. Our treatments are planned to meet your every
             need. We are highly dedicated and committed to be there with you at
@@ -124,7 +124,7 @@ const SectionTwo = () => {
           <h3 className="block xl:hidden text-3xl md:text-5xl font-custom mt-5">
             Experience the Best <i> Fertility Care</i>
           </h3>
-          <p className="my-2">
+          <p className="my-7 font-paragraph">
             At Conceiva, we are committed to providing you with the utmost care
             and all the support you need. Explore how your fertility journey
             will be with us-
@@ -139,7 +139,7 @@ const SectionTwo = () => {
                   marginRight: "10px",
                 }}
               />
-              <span className="font-medium">Advanced Technology:</span> Modern technologies for the best results
+              <span className="font-medium font-paragraph">Advanced Technology:</span> Modern technologies for the best results
             </li>
             <li className="py-3 border-b-2">
               <CheckCircleIcon
@@ -149,7 +149,7 @@ const SectionTwo = () => {
                   marginRight: "10px",
                 }}
               />
-              <span className="font-medium">Proven success rate</span>: Happy families
+              <span className="font-medium font-paragraph">Proven success rate</span>: Happy families
             </li>
             <li className="py-3 border-b-2">
               <CheckCircleIcon
@@ -159,7 +159,7 @@ const SectionTwo = () => {
                   marginRight: "10px",
                 }}
               />
-              <span className="font-medium"> Compassionate experts</span>
+              <span className="font-medium font-paragraph"> Compassionate experts</span>
             : Experienced professionals treating you like a family
             </li>
             <li className="py-3 border-b-2">
@@ -170,7 +170,7 @@ const SectionTwo = () => {
                   marginRight: "10px",
                 }}
               />
-                   <span className="font-medium">Personalised care</span>
+                   <span className="font-medium font-paragraph">Personalised care</span>
              : choose your treatment according to your needs where care is 
              guaranteed
             </li>
@@ -181,7 +181,7 @@ const SectionTwo = () => {
                   borderRadius: "50%",
                   marginRight: "10px",
                 }}
-              />   <span className="font-medium">Supportive Environment</span>:
+              />   <span className="font-medium font-paragraph">Supportive Environment</span>:
               Supportive Environment: our team always make you feel comfortable
             </li>
             

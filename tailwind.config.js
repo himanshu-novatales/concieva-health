@@ -4,7 +4,8 @@ module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}", "./public/index.html"],
   theme: { extend: {
     fontFamily:{
-      'custom': ['Cormorant', 'sans-serif']
+      custom: ['Fraunces', 'serif'],  // Your custom font for general use
+      paragraph: ['Manrope', 'sans-serif'],  // New font for paragraphs
     }
   } },
   plugins: [],

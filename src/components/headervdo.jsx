@@ -1,6 +1,7 @@
 import React from "react";
 import PhoneInTalkIcon from '@mui/icons-material/PhoneInTalk';
-import headervdo from "../assets/videos/baby-care-2.mp4";
+import headervdo from "../assets/videos/closeup-feet-of-a-nursing-baby-who-has-recently-be-2024-03-26-17-14-03-utc.mov";
+import bannerImage from '../assets/images/adorable-little-baby-lying-on-his-back-on-the-bed-2023-11-27-05-03-47-utc.jpg'
 import { motion, useScroll, useTransform } from "framer-motion";
 const HeadVdo = () => {
   const { scrollY } = useScroll();
@@ -13,7 +14,7 @@ const HeadVdo = () => {
         clipPath: "ellipse(160% 90% at 50% 8%)",
       }}
     >
-      <video
+      {/* <video
         autoPlay
         playsInline
         loop
@@ -21,7 +22,8 @@ const HeadVdo = () => {
         className="absolute top-0 left-0 w-full h-full object-cover"
       >
         <source src={headervdo} type="video/mp4" />
-      </video>
+      </video> */}
+      <img src={bannerImage} alt="" className="absolute top-0 left-0 w-full h-full object-cover" />
       <motion.div style={{ y }}       transition={{ type: "spring", stiffness: 100, damping: 20 }} className="absolute text-[#ddffff] top-[2%] p-8 xl:left-[-60px] lg:left-[-120px] md:left-[-120px]">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -113,7 +115,7 @@ const HeadVdo = () => {
       </motion.div>
         </div>
       <div className="absolute flex flex-col items-center text-center">
-        <p className="px-5  py-[2px] mb-8 text-sm rounded-3xl tracking-wide text-black text- bg-[#EFF7F7] uppercase">
+        <p className="px-5  py-[2px] mb-8 text-sm rounded-3xl tracking-[2px] text-black text- bg-[#F4F6FF] font-[600] uppercase font-paragraph">
           Making Miracles Possible
         </p>
         <div className="lg:mt-5 md:mt-3">

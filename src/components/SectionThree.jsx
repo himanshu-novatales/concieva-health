@@ -51,9 +51,9 @@ const SectionThree = () => {
           ref={sectionRef}
           className="border-2 text-center w-full flex flex-col md:flex-row lg:mt-0 mt-5 gap-2 p-3 border-[#EBE6DE] rounded-lg bg-[#FBF9F6]"
         >
-          <div className="text-left">
+          <div className="text-left font-paragraph">
             <h3>Live birth rates for egg recipient treatment</h3>
-            <p className="text-xs">by age group</p>
+            <p className="text-xs font-paragraph">by age group</p>
           </div>
           <div className="w-full max-w-lg mx-auto flex flex-col gap-[6px] mt-2">
             {data.map((item, index) => (
