@@ -23,7 +23,7 @@ const Footer = () => {
             <p>Sat – Sun: Closed</p>
           </div>
           <div className="text-center xl:text-left  md:text-left my-2 md:my-5">
-            <button className=" text-xl md:text-4xl mt-5 font-serif">
+            <button className=" text-xl md:text-4xl mt-5 font-paragraph">
               <PhoneInTalkIcon
                 sx={{ fontSize: "40px", paddingRight: "10px" }}
               />{" "}
@@ -52,7 +52,7 @@ const Footer = () => {
               </li>
               <li className="my-3">
                 <Link
-                  to="/ourdoctors"
+                  to="/"
                   className="text-[#0065B3]  hover:text-[#FFA61A] transition-all hover:duration-200"
                 >
                   Our Doctors
@@ -60,7 +60,7 @@ const Footer = () => {
               </li>
               <li className="my-3">
                 <Link
-                  to="/ourservices"
+                  to="/"
                   className="text-[#0065B3]  hover:text-[#FFA61A] transition-all hover:duration-200"
                 >
                   Our Services
@@ -68,7 +68,7 @@ const Footer = () => {
               </li>
               <li className="my-3">
                 <Link
-                  to="/aboutus"
+                  to="/"
                   className="text-[#0065B3]  hover:text-[#FFA61A] transition-all hover:duration-200"
                 >
                   About Us
@@ -76,7 +76,7 @@ const Footer = () => {
               </li>
               <li className="my-3">
                 <Link
-                  to="/contactus"
+                  to="/"
                   className="text-[#0065B3]  hover:text-[#FFA61A] transition-all hover:duration-200"
                 >
                   Contact Us
@@ -91,7 +91,7 @@ const Footer = () => {
             <ul className="font-medium">
               <li className="my-3">
                 <Link
-                  to="/aboutus"
+                  to="/"
                   className="text-[#0065B3]  hover:text-[#FFA61A] transition-all hover:duration-200"
                 >
                   Egg Freezing
@@ -99,7 +99,7 @@ const Footer = () => {
               </li>
               <li className="my-3">
                 <Link
-                  to="/aboutus"
+                  to="/"
                   className="text-[#0065B3]  hover:text-[#FFA61A] transition-all hover:duration-200"
                 >
                   Laparoscopic Surgery
@@ -107,7 +107,7 @@ const Footer = () => {
               </li>
               <li className="my-3">
                 <Link
-                  to="/aboutus"
+                  to="/"
                   className="text-[#0065B3]  hover:text-[#FFA61A] transition-all hover:duration-200"
                 >
                   Hysteroscopy
@@ -115,7 +115,7 @@ const Footer = () => {
               </li>
               <li className="my-3">
                 <Link
-                  to="/aboutus"
+                  to="/"
                   className="text-[#0065B3]  hover:text-[#FFA61A] transition-all hover:duration-200"
                 >
                   PGD
@@ -123,7 +123,7 @@ const Footer = () => {
               </li>
               <li className="my-3">
                 <Link
-                  to="/aboutus"
+                  to="/"
                   className="text-[#0065B3]  hover:text-[#FFA61A] transition-all hover:duration-200"
                 >
                   Veiw All Services

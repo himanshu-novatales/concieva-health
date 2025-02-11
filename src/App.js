@@ -14,7 +14,7 @@ import AboutUs from './pages/aboutus'
 function App () {
   return (
     <div className='App'>
-      <div className='flex justify-between items-center p-2 bg-[#c5e2f7] font-paragraph text-[15px] border-1 border-inherit'>
+    <div className='flex justify-between items-center p-1 bg-[#FFE5CF] font-paragraph text-[15px] border border-[#f3daca]'>
         <div className='hidden lg:flex justify-center ms-4 my-1 gap-0 lg:gap-3 items-center'>
           <p className='ms-4 tracking-wide'>
             {' '}

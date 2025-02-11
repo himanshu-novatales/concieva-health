@@ -5,19 +5,73 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/autoplay";
 import "./swiper.css";
+import dr2 from "../assets/images/dr-image-2.jpg"
+import dr1 from "../assets/images/dr-image-1.jpg"
+import dr3 from "../assets/images/dr-image-3.jpg"
+import dr4 from "../assets/images/doctor-showing-pregnancy-process-information-to-pr-2024-11-18-17-55-46-utc.jpg"
+import dr5 from "../assets/images/dr-image-5.jpg"
+import dr6 from "../assets/images/dr-image-6.jpg"
 import ArrowForwardOutlinedIcon from "@mui/icons-material/ArrowForwardOutlined";
-import slider from "../assets/images/baby-care-1.jpg";
 import { motion, useScroll, useTransform } from "framer-motion";
 export default function SectionFive() {
-  const { scrollY } = useScroll();
-  const y = useTransform(scrollY, [0, 800], [0, -500]);
+
+
   const targetRef = useRef(null);
   const { scrollYProgress } = useScroll({
     target: targetRef,
-    offset: ["start end", "end start"], // Adjust offset as needed
+    offset: ["start end", "end start"],
   });
 
-  // Mapping scroll progress (0 to 1) to x translation (e.g., from -200px to 200px)
+  const SliderData = [
+    {
+      image: dr1,
+      name: "Dr Smith",
+      post: "Founder and Director",
+    },
+    {
+      image: dr2,
+      name: "Dr Shophie",
+      post: "Boar Certified Gynecologist ",
+    },
+    {
+      image: dr3,
+      name: "Dr Amy ",
+      post: "Reproductive Endocrinologist",
+    },
+    {
+      image: dr4,
+      name: "Dr Emily",
+      post: "Boar Certified Gynecologist",
+    },
+    {
+      image: dr5,
+      name: "Dr Gargi",
+      post: "Reproductive Endocrinologist",
+    },
+    {
+      image: dr6,
+      name: "Dr Novak",
+      post: "Junior Doctor",
+    },
+    {
+      image: dr6,
+      name: "Dr Novak",
+      post: "Junior Doctor",
+    },{
+      image: dr5,
+      name: "Dr Gargi",
+      post: "Reproductive Endocrinologist",
+    }, {
+      image: dr1,
+      name: "Dr Smith",
+      post: "Founder and Director",
+    },
+    {
+      image: dr2,
+      name: "Dr Shophie",
+      post: "Boar Certified Gynecologist ",
+    },
+  ];
   const x = useTransform(scrollYProgress, [0, 1], [-200, 300]);
   return (
     <div className="section-five-container relative mb-10 2xl:mb-30 xl:mb-20 p-5">
@@ -32,7 +86,6 @@ export default function SectionFive() {
             spaceBetween: 20,
           },
           768: {
-            
             slidesPerView: 2,
             spaceBetween: 10,
           },
@@ -56,7 +109,7 @@ export default function SectionFive() {
         modules={[Pagination, Autoplay]}
         className="mySwiper w-full"
       >
-        {[...Array(10)].map((_, index) => (
+        {SliderData.map((item, index) => (
           <SwiperSlide
             key={index}
             className="flex justify-center  hover:cursor-pointer"
@@ -65,16 +118,16 @@ export default function SectionFive() {
               <div class="overflow-hidden rounded-md h-80 flex justify-center items-center">
                 <img
                   class="w-72 h-72 object-cover rounded-full"
-                  src={slider}
+                  src={item.image}
                   alt="profile-picture"
                 />
               </div>
               <div class="p-3 my-3 text-center">
                 <h4 class="mb-1 text-xl font-semibold group-hover:text-white  text-slate-800">
-                  Dr Shophie Kalen
+                  {item.name}
                 </h4>
                 <p class="text-sm font-semibold group-hover:text-white  text-slate-500 uppercase">
-                  Senior Doctor
+                  {item.post}
                 </p>
               </div>
               <div class="flex justify-center p-6 pt-2 gap-7">

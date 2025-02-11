@@ -37,7 +37,7 @@ const SectionThree = () => {
       <h3 className="block xl:hidden text-3xl text-center font-medium  font-custom mt-5">
       Certifications & Accreditations
       </h3>
-      <div className="flex flex-col lg:flex-row gap-8 p-5 md:mb-5 mt-5">
+      <div className="flex flex-col xl:flex-row gap-8 p-5 md:mb-5 mt-5">
         {/* Text Section */}
         <div className="text-center flex flex-col sm:flex-row gap-12 items-center">
           <div className="text-left w-full lg:w-80">
